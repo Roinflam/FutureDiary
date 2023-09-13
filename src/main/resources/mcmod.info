@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "futurediary",
+    "name": "FutureDiary",
+    "description": "Can you avoid the Dead End?",
+    "version": "1.0.0",
+    "mcversion": "1.12.2",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "Roinflam"
+    ],
+    "credits": "",
+    "logoFile": "logo.png",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

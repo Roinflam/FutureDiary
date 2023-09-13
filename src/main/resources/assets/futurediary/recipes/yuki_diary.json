@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BCB",
+    "BBB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:glass"
+    },
+    "B": {
+      "item": "minecraft:wool",
+      "data": 6
+    },
+    "C": {
+      "item": "futurediary:random_diary"
+    }
+  },
+  "result": {
+    "item": "futurediary:yuki_diary",
+    "count": 1
+  }
+}

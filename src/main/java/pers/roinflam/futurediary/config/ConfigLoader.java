@@ -28,7 +28,7 @@ public final class ConfigLoader {
 
     @Config.Comment("Set when the first bad event occurs, reduce the base probability and then decide whether to generate the next bad event, for example, the base probability is 1, here the setting is 0.15, the probability of the first bad event is 100%, the second is 85%, and the third One is 70% and so on until the probability is equal to 0%")
     @Config.RangeDouble(min = 0)
-    public static double badEventMultipleProbability = 0.175;
+    public static double badEventMultipleProbability = 0.19;
 
     @Config.Comment("Set the maximum number of bad events that can be automatically generated")
     @Config.RangeInt(min = 0)
@@ -38,9 +38,9 @@ public final class ConfigLoader {
     @Config.RangeDouble(min = 0)
     public static double catastrophicEventBaseProbability = 0.1;
 
-    @Config.Comment("Set when the first catastrophic event occurs, reduce the base probability and then decide whether to generate the next catastrophic event, for example, the base probability is 1, here the setting is 0.15, the probability of the first catastrophic event is 100%, the second is 85%, and the third One is 70% and so on until the probability is equal to 0%")
+    @Config.Comment("Set when the first catastrophic event occurs, reduce the base probability and then decide whether to generate the next catastrophic event, for example, the base probability is 1, here the setting is 0.33, the probability of the first catastrophic event is 100%, the second is 66%, and the third One is 33% and so on until the probability is equal to 0%")
     @Config.RangeDouble(min = 0)
-    public static double catastrophicEventMultipleProbability = 0.025;
+    public static double catastrophicEventMultipleProbability = 0.033;
 
     @Config.Comment("Set the maximum number of catastrophic events that can be automatically generated")
     @Config.RangeInt(min = 0)
@@ -48,9 +48,9 @@ public final class ConfigLoader {
 
     @Config.Comment("Set the base generation probability of good events. The first one is set to 1 if you want to have good events for every future change, and 0.5 means that there is a half probability that at least one good event will be generated.")
     @Config.RangeDouble(min = 0)
-    public static double goodEventBaseProbability = 0.25;
+    public static double goodEventBaseProbability = 0.5;
 
-    @Config.Comment("Set when the first good event occurs, reduce the base probability and then decide whether to generate the next good event, for example, the base probability is 1, here the setting is 0.15, the probability of the first good event is 100%, the second is 85%, and the third One is 70% and so on until the probability is equal to 0%")
+    @Config.Comment("Set when the first good event occurs, reduce the base probability and then decide whether to generate the next good event, for example, the base probability is 1, here the setting is 0.1, the probability of the first good event is 100%, the second is 90%, and the third One is 80% and so on until the probability is equal to 0%")
     @Config.RangeDouble(min = 0)
     public static double goodEventMultipleProbability = 0.1;
 

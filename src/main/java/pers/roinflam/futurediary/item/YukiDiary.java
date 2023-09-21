@@ -25,9 +25,12 @@ import pers.roinflam.futurediary.utils.IHasModel;
 import pers.roinflam.futurediary.utils.util.ItemUtil;
 
 import javax.annotation.Nonnull;
+import java.util.HashSet;
+import java.util.UUID;
 
 @Mod.EventBusSubscriber
 public class YukiDiary extends Item implements IHasModel {
+    private final static HashSet<UUID> uuid = new HashSet<>();
 
     public YukiDiary(@Nonnull String name, @Nonnull CreativeTabs creativeTabs) {
         ItemUtil.registerItem(this, name, creativeTabs);
@@ -50,16 +53,24 @@ public class YukiDiary extends Item implements IHasModel {
     @SubscribeEvent
     public static void onEntityJoinWorld(@Nonnull EntityJoinWorldEvent evt) {
         if (!evt.getWorld().isRemote) {
-            if (evt.getEntity() instanceof EntityPlayer) {
+            if (evt.getEntity() instanceof EntityPlayer && !uuid.contains(evt.getEntity().getUniqueID())) {
                 EntityPlayer entityPlayer = (EntityPlayer) evt.getEntity();
                 entityPlayer.getCooldownTracker().setCooldown(FutureDiaryItems.YUKI_DIARY, ConfigLoader.updateSecond * 20);
+                uuid.add(entityPlayer.getUniqueID());
             }
         }
     }
 
     @SubscribeEvent
-    public static void onEntityJoinWorld(@Nonnull PlayerEvent.Clone evt) {
-        if (!evt.getEntity().world.isRemote) {
+    public static void onPlayerLoggedOut(@Nonnull net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedOutEvent evt) {
+        if (!evt.player.world.isRemote) {
+            uuid.remove(evt.player.getUniqueID());
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerClone(@Nonnull PlayerEvent.Clone evt) {
+        if (!evt.getEntity().world.isRemote && evt.isWasDeath()) {
             EntityPlayer entityPlayer = evt.getEntityPlayer();
             entityPlayer.getCooldownTracker().setCooldown(FutureDiaryItems.YUKI_DIARY, ConfigLoader.updateSecond * 20);
         }

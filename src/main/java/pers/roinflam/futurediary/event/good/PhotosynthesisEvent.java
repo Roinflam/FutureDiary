@@ -21,7 +21,7 @@ public class PhotosynthesisEvent extends FutureEvent {
             }
             EntityPlayer entityPlayer = evt.player;
             if (world.getTotalWorldTime() % 20 == 0 && world.isDaytime() && world.canSeeSky(entityPlayer.getPosition())) {
-                entityPlayer.heal(entityPlayer.getMaxHealth() * 0.01f);
+                entityPlayer.heal(entityPlayer.getMaxHealth() * 0.025f);
                 FoodStats foodStats = entityPlayer.getFoodStats();
                 if (foodStats.needFood()) {
                     foodStats.setFoodLevel(foodStats.getFoodLevel() + 1);

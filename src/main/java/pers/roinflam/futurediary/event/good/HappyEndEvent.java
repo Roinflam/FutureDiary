@@ -20,7 +20,7 @@ public class HappyEndEvent extends FutureEvent {
             if (!this.isEnableEvent(world)) {
                 return;
             }
-            if (evt.getEntityLiving() instanceof EntityPlayer && RandomUtil.percentageChance(33)) {
+            if (evt.getEntityLiving() instanceof EntityPlayer && RandomUtil.percentageChance(50)) {
                 EntityPlayer entityPlayer = (EntityPlayer) evt.getEntityLiving();
                 evt.setCanceled(true);
                 entityPlayer.setHealth(entityPlayer.getMaxHealth());

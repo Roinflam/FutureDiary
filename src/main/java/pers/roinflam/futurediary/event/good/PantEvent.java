@@ -27,7 +27,7 @@ public class PantEvent extends FutureEvent {
             }
             EntityPlayer entityPlayer = evt.player;
             if (world.getTotalWorldTime() % 20 == 0 && !battle.contains(entityPlayer.getUniqueID().toString())) {
-                entityPlayer.heal(entityPlayer.getHealth() * 0.1f);
+                entityPlayer.heal(entityPlayer.getHealth() * 0.2f);
                 this.sendReminder(entityPlayer);
             }
         }

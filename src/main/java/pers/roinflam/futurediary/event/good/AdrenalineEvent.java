@@ -66,7 +66,7 @@ public class AdrenalineEvent extends FutureEvent {
 
         @Override
         public void performEffect(@Nonnull EntityLivingBase entityLivingBaseIn, int amplifier) {
-            entityLivingBaseIn.heal((entityLivingBaseIn.getMaxHealth() - entityLivingBaseIn.getHealth()) * 0.033f);
+            entityLivingBaseIn.heal((entityLivingBaseIn.getMaxHealth() - entityLivingBaseIn.getHealth()) * 0.066f);
         }
 
         @Override

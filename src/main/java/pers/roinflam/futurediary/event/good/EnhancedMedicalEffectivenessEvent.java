@@ -21,7 +21,7 @@ public class EnhancedMedicalEffectivenessEvent extends FutureEvent {
             }
             if (evt.getEntityLiving() instanceof EntityPlayer) {
                 EntityLivingBase healer = evt.getEntityLiving();
-                evt.setAmount(evt.getAmount() * 1.75f);
+                evt.setAmount(evt.getAmount() * 2f);
                 this.sendReminder(healer);
             }
         }

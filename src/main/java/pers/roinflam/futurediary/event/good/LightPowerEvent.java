@@ -24,8 +24,8 @@ public class LightPowerEvent extends FutureEvent {
             DamageSource damageSource = evt.getSource();
             if (damageSource.getTrueSource() instanceof EntityPlayer && hurter.world.getLight(hurter.getPosition()) > 10) {
                 EntityPlayer entityPlayer = (EntityPlayer) damageSource.getTrueSource();
-                evt.setAmount(evt.getAmount() * 1.25f);
-                entityPlayer.heal(entityPlayer.getMaxHealth() * 0.075f);
+                evt.setAmount(evt.getAmount() * 1.375f);
+                entityPlayer.heal(entityPlayer.getMaxHealth() * 0.1f);
                 this.sendReminder(entityPlayer);
             }
         }

@@ -48,7 +48,7 @@ public final class ConfigLoader {
 
     @Config.Comment("Set the base generation probability of good events. The first one is set to 1 if you want to have good events for every future change, and 0.5 means that there is a half probability that at least one good event will be generated.")
     @Config.RangeDouble(min = 0)
-    public static double goodEventBaseProbability = 0.5;
+    public static double goodEventBaseProbability = 0.3;
 
     @Config.Comment("Set when the first good event occurs, reduce the base probability and then decide whether to generate the next good event, for example, the base probability is 1, here the setting is 0.1, the probability of the first good event is 100%, the second is 90%, and the third One is 80% and so on until the probability is equal to 0%")
     @Config.RangeDouble(min = 0)

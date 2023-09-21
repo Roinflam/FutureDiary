@@ -25,12 +25,12 @@ public class InitiativeEvent extends FutureEvent {
             DamageSource damageSource = evt.getSource();
             if (damageSource.getTrueSource() instanceof EntityPlayer && hurter.getHealth() >= hurter.getMaxHealth()) {
                 EntityPlayer attacker = (EntityPlayer) damageSource.getTrueSource();
-                float extraDamage = evt.getAmount() * 0.5f;
+                float extraDamage = evt.getAmount() * 0.75f;
                 evt.setAmount(evt.getAmount() + extraDamage);
                 if (extraDamage > hurter.getHealth()) {
                     extraDamage = hurter.getHealth();
                 }
-                int exp = Math.max(1, (int) (extraDamage * 0.1));
+                int exp = (int) Math.max(1, Math.min(extraDamage * 0.15, attacker.experienceTotal * 0.075));
                 hurter.world.spawnEntity(new EntityXPOrb(world, hurter.posX, hurter.posY, hurter.posZ, exp));
                 this.sendReminder(attacker);
             }

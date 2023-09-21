@@ -26,7 +26,7 @@ public class RaidEvent extends FutureEvent {
                 EntityPlayer attacker = (EntityPlayer) damageSource.getTrueSource();
                 if (hurter.getAttackTarget() == null || !hurter.getAttackTarget().equals(attacker)) {
                     damageSource.setDamageBypassesArmor();
-                    evt.setAmount(evt.getAmount() * 1.5f);
+                    evt.setAmount(evt.getAmount() * 1.75f);
                     this.sendReminder(attacker);
                 }
             }

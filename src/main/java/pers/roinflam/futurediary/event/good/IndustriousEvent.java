@@ -19,7 +19,7 @@ public class IndustriousEvent extends FutureEvent {
             if (!this.isEnableEvent(world)) {
                 return;
             }
-            evt.setNewSpeed(evt.getNewSpeed() * 2);
+            evt.setNewSpeed(evt.getNewSpeed() * 3);
         }
     }
 

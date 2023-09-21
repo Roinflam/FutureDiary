@@ -31,7 +31,7 @@ public class LonelyWarriorEvent extends FutureEvent {
                         otherPlayer -> !otherPlayer.equals(entityPlayer)
                 );
                 if (entityPlayers.size() == 0) {
-                    evt.setAmount(evt.getAmount() * 0.75f);
+                    evt.setAmount(evt.getAmount() * 0.625f);
                     this.sendReminder(entityPlayer);
                 }
             }
@@ -45,7 +45,7 @@ public class LonelyWarriorEvent extends FutureEvent {
                         otherPlayer -> !otherPlayer.equals(entityPlayer)
                 );
                 if (entityPlayers.size() == 0) {
-                    evt.setAmount(evt.getAmount() * 1.5f);
+                    evt.setAmount(evt.getAmount() * 1.75f);
                     this.sendReminder(entityPlayer);
                 }
             }

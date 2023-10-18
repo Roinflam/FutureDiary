@@ -44,7 +44,7 @@ public class PantEvent extends FutureEvent {
                 EntityPlayer entityPlayer = (EntityPlayer) evt.getEntityLiving();
                 String uuidString = entityPlayer.getUniqueID().toString();
                 battle.add(uuidString);
-                new SynchronizationTask(200) {
+                new SynchronizationTask(160) {
 
                     @Override
                     public void run() {
@@ -58,7 +58,7 @@ public class PantEvent extends FutureEvent {
                 EntityPlayer entityPlayer = (EntityPlayer) damageSource.getTrueSource();
                 String uuidString = entityPlayer.getUniqueID().toString();
                 battle.add(uuidString);
-                new SynchronizationTask(200) {
+                new SynchronizationTask(160) {
 
                     @Override
                     public void run() {

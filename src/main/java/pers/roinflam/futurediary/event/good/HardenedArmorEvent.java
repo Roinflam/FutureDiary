@@ -86,8 +86,8 @@ public class HardenedArmorEvent extends FutureEvent {
 
         protected MobEffectHardenedArmor(boolean isBadEffectIn, int liquidColorIn, @Nonnull String name) {
             super(isBadEffectIn, liquidColorIn, name);
-            this.registerPotionAttributeModifier(SharedMonsterAttributes.ARMOR, "dffcd2e1-28b1-33b4-55c3-01f6c98530fa", 3.33, 2);
-            this.registerPotionAttributeModifier(SharedMonsterAttributes.ARMOR_TOUGHNESS, "f484fe36-cc7d-044c-f5c4-97f153f6bd1f", 3.33, 2);
+            this.registerPotionAttributeModifier(SharedMonsterAttributes.ARMOR, "dffcd2e1-28b1-33b4-55c3-01f6c98530fa", 4.44, 2);
+            this.registerPotionAttributeModifier(SharedMonsterAttributes.ARMOR_TOUGHNESS, "f484fe36-cc7d-044c-f5c4-97f153f6bd1f", 4.44, 2);
         }
 
     }

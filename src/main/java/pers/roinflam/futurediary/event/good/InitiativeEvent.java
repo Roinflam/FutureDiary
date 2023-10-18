@@ -30,7 +30,7 @@ public class InitiativeEvent extends FutureEvent {
                 if (extraDamage > hurter.getHealth()) {
                     extraDamage = hurter.getHealth();
                 }
-                int exp = (int) Math.max(1, Math.min(extraDamage * 0.15, attacker.experienceTotal * 0.075));
+                int exp = (int) Math.max(1, Math.min(extraDamage * 0.33, attacker.experienceTotal * 0.1));
                 hurter.world.spawnEntity(new EntityXPOrb(world, hurter.posX, hurter.posY, hurter.posZ, exp));
                 this.sendReminder(attacker);
             }

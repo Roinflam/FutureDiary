@@ -19,7 +19,7 @@ public class LearnedEvent extends FutureEvent {
                 return;
             }
             EntityXPOrb entityXPOrb = evt.getOrb();
-            entityXPOrb.xpValue *= 3.33;
+            entityXPOrb.xpValue *= 4.44;
             this.sendReminder(evt.getEntityLiving());
         }
     }

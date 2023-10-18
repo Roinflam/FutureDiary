@@ -27,7 +27,7 @@ public class AdrenalineEvent extends FutureEvent {
             }
             if (evt.getEntityLiving() instanceof EntityPlayer) {
                 EntityPlayer entityPlayer = (EntityPlayer) evt.getEntityLiving();
-                if (evt.getAmount() >= entityPlayer.getMaxHealth() * 0.33f) {
+                if (evt.getAmount() >= entityPlayer.getMaxHealth() * 0.25f) {
                     entityPlayer.addPotionEffect(new PotionEffect(ADRENALINE, 200, 0));
                     this.sendReminder(entityPlayer);
                 }
@@ -61,12 +61,12 @@ public class AdrenalineEvent extends FutureEvent {
 
         protected MobEffectAdrenaline(boolean isBadEffectIn, int liquidColorIn, @Nonnull String name) {
             super(isBadEffectIn, liquidColorIn, name);
-            this.registerPotionAttributeModifier(SharedMonsterAttributes.MOVEMENT_SPEED, "6fdf3f06-424c-c57f-828f-e18d14c50605", 0.66, 2);
+            this.registerPotionAttributeModifier(SharedMonsterAttributes.MOVEMENT_SPEED, "6fdf3f06-424c-c57f-828f-e18d14c50605", 0.5, 2);
         }
 
         @Override
         public void performEffect(@Nonnull EntityLivingBase entityLivingBaseIn, int amplifier) {
-            entityLivingBaseIn.heal((entityLivingBaseIn.getMaxHealth() - entityLivingBaseIn.getHealth()) * 0.066f);
+            entityLivingBaseIn.heal((entityLivingBaseIn.getMaxHealth() - entityLivingBaseIn.getHealth()) * 0.05f);
         }
 
         @Override

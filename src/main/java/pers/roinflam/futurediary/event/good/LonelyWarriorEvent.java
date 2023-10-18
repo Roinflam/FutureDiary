@@ -27,11 +27,11 @@ public class LonelyWarriorEvent extends FutureEvent {
                 @Nonnull List<EntityPlayer> entityPlayers = EntityUtil.getNearbyEntities(
                         EntityPlayer.class,
                         entityPlayer,
-                        32,
+                        64,
                         otherPlayer -> !otherPlayer.equals(entityPlayer)
                 );
                 if (entityPlayers.size() == 0) {
-                    evt.setAmount(evt.getAmount() * 0.625f);
+                    evt.setAmount(evt.getAmount() * 0.5f);
                     this.sendReminder(entityPlayer);
                 }
             }
@@ -41,11 +41,11 @@ public class LonelyWarriorEvent extends FutureEvent {
                 @Nonnull List<EntityPlayer> entityPlayers = EntityUtil.getNearbyEntities(
                         EntityPlayer.class,
                         entityPlayer,
-                        32,
+                        64,
                         otherPlayer -> !otherPlayer.equals(entityPlayer)
                 );
                 if (entityPlayers.size() == 0) {
-                    evt.setAmount(evt.getAmount() * 1.75f);
+                    evt.setAmount(evt.getAmount() * 2);
                     this.sendReminder(entityPlayer);
                 }
             }

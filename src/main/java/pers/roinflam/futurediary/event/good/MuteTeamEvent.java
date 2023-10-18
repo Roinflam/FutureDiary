@@ -21,13 +21,13 @@ public class MuteTeamEvent extends FutureEvent {
             }
             if (evt.getEntityLiving() instanceof EntityPlayer) {
                 EntityPlayer entityPlayer = (EntityPlayer) evt.getEntityLiving();
-                evt.setAmount(evt.getAmount() * 0.625f);
+                evt.setAmount(evt.getAmount() * 0.5f);
                 this.sendReminder(entityPlayer);
             }
             DamageSource damageSource = evt.getSource();
             if (damageSource.getTrueSource() instanceof EntityPlayer) {
                 EntityPlayer entityPlayer = (EntityPlayer) damageSource.getTrueSource();
-                evt.setAmount(evt.getAmount() * 1.375f);
+                evt.setAmount(evt.getAmount() * 1.5f);
             }
         }
     }

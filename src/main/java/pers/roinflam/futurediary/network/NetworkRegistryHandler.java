@@ -13,7 +13,6 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.internal.FMLProxyPacket;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import pers.roinflam.futurediary.utils.Reference;
 import pers.roinflam.futurediary.utils.helper.task.SynchronizationTask;
 
 import javax.annotation.Nonnull;
@@ -28,7 +27,7 @@ public class NetworkRegistryHandler {
     }
 
     public static class RenderingEffect {
-        private static final String NAME = Reference.NAME + "_RENDERING_EFFECT";
+        private static final String NAME = "FD_RENDERING";
         private static final FMLEventChannel CHANNEL = NetworkRegistry.INSTANCE.newEventDrivenChannel(NAME);
 
         private static final HashMap<Integer, List<Integer>> ENTITIES_ID = new HashMap<>();
@@ -77,7 +76,6 @@ public class NetworkRegistryHandler {
             for (Integer integer : entites_id) {
                 packetBuffer.writeInt(integer);
             }
-
             CHANNEL.sendTo(new FMLProxyPacket(packetBuffer, NAME), (EntityPlayerMP) entityPlayer);
         }
 

@@ -2,7 +2,6 @@ package pers.roinflam.futurediary.utils.util;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import pers.roinflam.futurediary.FutureDiary;
 
 import javax.annotation.Nonnull;
 
@@ -13,7 +12,6 @@ public class ItemUtil {
         item.setUnlocalizedName(name);
         item.setRegistryName(name);
         item.setCreativeTab(creativeTabs);
-        FutureDiary.proxy.registerItemRenderer(item, 0, "inventory");
         return item;
     }
 

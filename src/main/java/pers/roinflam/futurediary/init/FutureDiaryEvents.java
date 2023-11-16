@@ -25,6 +25,7 @@ public class FutureDiaryEvents {
     public static final SpawnEvent SPAWN_EVENT = new SpawnEvent();
     public static final ThornEvent THORN_EVENT = new ThornEvent();
     public static final SelfExplosionEvent SELF_EXPLOSION_EVENT = new SelfExplosionEvent();
+    public static final CriticalStrikeEvent CRITICAL_STRIKE_EVENT = new CriticalStrikeEvent();
     public static final TriggeringInjuryEvent TRIGGERING_INJURY_EVENT = new TriggeringInjuryEvent();
     public static final TriggeringCrisisEvent TRIGGERING_CRISIS_EVENT = new TriggeringCrisisEvent();
     public static final ConvergentConsumptionEvent CONVERGENT_CONSUMPTION_EVENT = new ConvergentConsumptionEvent();
